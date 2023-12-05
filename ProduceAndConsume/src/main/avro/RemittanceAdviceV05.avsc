@@ -1,0 +1,1452 @@
+{
+  "type" : "record",
+  "name" : "Document",
+  "namespace" : "com.demo.remittance.msg.definitions",
+  "fields" : [ {
+    "name" : "RmtAdvc",
+    "type" : {
+      "type" : "record",
+      "name" : "RemittanceAdviceV05",
+      "fields" : [ {
+        "name" : "GrpHdr",
+        "type" : {
+          "type" : "record",
+          "name" : "GroupHeader79",
+          "fields" : [ {
+            "name" : "MsgId",
+            "type" : "string",
+            "source" : "element com.demo.remittance:MsgId"
+          }, {
+            "name" : "CreDtTm",
+            "type" : "long",
+            "source" : "element com.demo.remittance:CreDtTm",
+            "comment" : "timestamp"
+          }, {
+            "name" : "Authstn",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : {
+                "type" : "record",
+                "name" : "Authorisation1Choice",
+                "fields" : [ {
+                  "name" : "Cd",
+                  "type" : [ "null", "string" ],
+                  "source" : "element com.demo.remittance:Cd"
+                }, {
+                  "name" : "Prtry",
+                  "type" : [ "null", "string" ],
+                  "source" : "element com.demo.remittance:Prtry"
+                } ]
+              }
+            } ],
+            "source" : "element com.demo.remittance:Authstn"
+          }, {
+            "name" : "CpyInd",
+            "type" : [ "null", "string" ],
+            "source" : "element com.demo.remittance:CpyInd"
+          }, {
+            "name" : "InitgPty",
+            "type" : {
+              "type" : "record",
+              "name" : "PartyIdentification135",
+              "fields" : [ {
+                "name" : "Nm",
+                "type" : [ "null", "string" ],
+                "source" : "element com.demo.remittance:Nm"
+              }, {
+                "name" : "PstlAdr",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "PostalAddress24",
+                  "fields" : [ {
+                    "name" : "AdrTp",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "AddressType3Choice",
+                      "fields" : [ {
+                        "name" : "Cd",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Cd"
+                      }, {
+                        "name" : "Prtry",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "GenericIdentification30",
+                          "fields" : [ {
+                            "name" : "Id",
+                            "type" : "string",
+                            "source" : "element com.demo.remittance:Id"
+                          }, {
+                            "name" : "Issr",
+                            "type" : "string",
+                            "source" : "element com.demo.remittance:Issr"
+                          }, {
+                            "name" : "SchmeNm",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:SchmeNm"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:Prtry"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:AdrTp"
+                  }, {
+                    "name" : "Dept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Dept"
+                  }, {
+                    "name" : "SubDept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:SubDept"
+                  }, {
+                    "name" : "StrtNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:StrtNm"
+                  }, {
+                    "name" : "BldgNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:BldgNb"
+                  }, {
+                    "name" : "BldgNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:BldgNm"
+                  }, {
+                    "name" : "Flr",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Flr"
+                  }, {
+                    "name" : "PstBx",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:PstBx"
+                  }, {
+                    "name" : "Room",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Room"
+                  }, {
+                    "name" : "PstCd",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:PstCd"
+                  }, {
+                    "name" : "TwnNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:TwnNm"
+                  }, {
+                    "name" : "TwnLctnNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:TwnLctnNm"
+                  }, {
+                    "name" : "DstrctNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:DstrctNm"
+                  }, {
+                    "name" : "CtrySubDvsn",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:CtrySubDvsn"
+                  }, {
+                    "name" : "Ctry",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Ctry"
+                  }, {
+                    "name" : "AdrLine",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : "string"
+                    } ],
+                    "source" : "element com.demo.remittance:AdrLine"
+                  } ]
+                } ],
+                "source" : "element com.demo.remittance:PstlAdr"
+              }, {
+                "name" : "Id",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "Party38Choice",
+                  "fields" : [ {
+                    "name" : "OrgId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "OrganisationIdentification29",
+                      "fields" : [ {
+                        "name" : "AnyBIC",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:AnyBIC"
+                      }, {
+                        "name" : "LEI",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:LEI"
+                      }, {
+                        "name" : "Othr",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "GenericOrganisationIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element com.demo.remittance:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "OrganisationIdentificationSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element com.demo.remittance:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Issr"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element com.demo.remittance:Othr"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:OrgId"
+                  }, {
+                    "name" : "PrvtId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "PersonIdentification13",
+                      "fields" : [ {
+                        "name" : "DtAndPlcOfBirth",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "DateAndPlaceOfBirth1",
+                          "fields" : [ {
+                            "name" : "BirthDt",
+                            "type" : "string",
+                            "source" : "element com.demo.remittance:BirthDt"
+                          }, {
+                            "name" : "PrvcOfBirth",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:PrvcOfBirth"
+                          }, {
+                            "name" : "CityOfBirth",
+                            "type" : "string",
+                            "source" : "element com.demo.remittance:CityOfBirth"
+                          }, {
+                            "name" : "CtryOfBirth",
+                            "type" : "string",
+                            "source" : "element com.demo.remittance:CtryOfBirth"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:DtAndPlcOfBirth"
+                      }, {
+                        "name" : "Othr",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "GenericPersonIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element com.demo.remittance:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "PersonIdentificationSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element com.demo.remittance:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Issr"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element com.demo.remittance:Othr"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:PrvtId"
+                  } ]
+                } ],
+                "source" : "element com.demo.remittance:Id"
+              }, {
+                "name" : "CtryOfRes",
+                "type" : [ "null", "string" ],
+                "source" : "element com.demo.remittance:CtryOfRes"
+              }, {
+                "name" : "CtctDtls",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "Contact4",
+                  "fields" : [ {
+                    "name" : "NmPrfx",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:NmPrfx"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Nm"
+                  }, {
+                    "name" : "PhneNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:PhneNb"
+                  }, {
+                    "name" : "MobNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:MobNb"
+                  }, {
+                    "name" : "FaxNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:FaxNb"
+                  }, {
+                    "name" : "EmailAdr",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:EmailAdr"
+                  }, {
+                    "name" : "EmailPurp",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:EmailPurp"
+                  }, {
+                    "name" : "JobTitl",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:JobTitl"
+                  }, {
+                    "name" : "Rspnsblty",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Rspnsblty"
+                  }, {
+                    "name" : "Dept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Dept"
+                  }, {
+                    "name" : "Othr",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "OtherContact1",
+                        "fields" : [ {
+                          "name" : "ChanlTp",
+                          "type" : "string",
+                          "source" : "element com.demo.remittance:ChanlTp"
+                        }, {
+                          "name" : "Id",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Id"
+                        } ]
+                      }
+                    } ],
+                    "source" : "element com.demo.remittance:Othr"
+                  }, {
+                    "name" : "PrefrdMtd",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:PrefrdMtd"
+                  } ]
+                } ],
+                "source" : "element com.demo.remittance:CtctDtls"
+              } ]
+            },
+            "source" : "element com.demo.remittance:InitgPty"
+          }, {
+            "name" : "MsgRcpt",
+            "type" : [ "null", "PartyIdentification135" ],
+            "source" : "element com.demo.remittance:MsgRcpt"
+          }, {
+            "name" : "FwdgAgt",
+            "type" : [ "null", {
+              "type" : "record",
+              "name" : "BranchAndFinancialInstitutionIdentification6",
+              "fields" : [ {
+                "name" : "FinInstnId",
+                "type" : {
+                  "type" : "record",
+                  "name" : "FinancialInstitutionIdentification18",
+                  "fields" : [ {
+                    "name" : "BICFI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:BICFI"
+                  }, {
+                    "name" : "ClrSysMmbId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "ClearingSystemMemberIdentification2",
+                      "fields" : [ {
+                        "name" : "ClrSysId",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "ClearingSystemIdentification2Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Prtry"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:ClrSysId"
+                      }, {
+                        "name" : "MmbId",
+                        "type" : "string",
+                        "source" : "element com.demo.remittance:MmbId"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:ClrSysMmbId"
+                  }, {
+                    "name" : "LEI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:LEI"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Nm"
+                  }, {
+                    "name" : "PstlAdr",
+                    "type" : [ "null", "PostalAddress24" ],
+                    "source" : "element com.demo.remittance:PstlAdr"
+                  }, {
+                    "name" : "Othr",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "GenericFinancialIdentification1",
+                      "fields" : [ {
+                        "name" : "Id",
+                        "type" : "string",
+                        "source" : "element com.demo.remittance:Id"
+                      }, {
+                        "name" : "SchmeNm",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "FinancialIdentificationSchemeName1Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Prtry"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:SchmeNm"
+                      }, {
+                        "name" : "Issr",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Issr"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:Othr"
+                  } ]
+                },
+                "source" : "element com.demo.remittance:FinInstnId"
+              }, {
+                "name" : "BrnchId",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "BranchData3",
+                  "fields" : [ {
+                    "name" : "Id",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Id"
+                  }, {
+                    "name" : "LEI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:LEI"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element com.demo.remittance:Nm"
+                  }, {
+                    "name" : "PstlAdr",
+                    "type" : [ "null", "PostalAddress24" ],
+                    "source" : "element com.demo.remittance:PstlAdr"
+                  } ]
+                } ],
+                "source" : "element com.demo.remittance:BrnchId"
+              } ]
+            } ],
+            "source" : "element com.demo.remittance:FwdgAgt"
+          } ]
+        },
+        "source" : "element com.demo.remittance:GrpHdr"
+      }, {
+        "name" : "RmtInf",
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "RemittanceInformation20",
+            "fields" : [ {
+              "name" : "RmtId",
+              "type" : [ "null", "string" ],
+              "source" : "element com.demo.remittance:RmtId"
+            }, {
+              "name" : "Ustrd",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : "string"
+              } ],
+              "source" : "element com.demo.remittance:Ustrd"
+            }, {
+              "name" : "Strd",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "StructuredRemittanceInformation17",
+                  "fields" : [ {
+                    "name" : "RfrdDocInf",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "ReferredDocumentInformation7",
+                        "fields" : [ {
+                          "name" : "Tp",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "ReferredDocumentType4",
+                            "fields" : [ {
+                              "name" : "CdOrPrtry",
+                              "type" : {
+                                "type" : "record",
+                                "name" : "ReferredDocumentType3Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Prtry"
+                                } ]
+                              },
+                              "source" : "element com.demo.remittance:CdOrPrtry"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Issr"
+                            } ]
+                          } ],
+                          "source" : "element com.demo.remittance:Tp"
+                        }, {
+                          "name" : "Nb",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Nb"
+                        }, {
+                          "name" : "RltdDt",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:RltdDt"
+                        }, {
+                          "name" : "LineDtls",
+                          "type" : [ "null", {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "DocumentLineInformation1",
+                              "fields" : [ {
+                                "name" : "Id",
+                                "type" : {
+                                  "type" : "array",
+                                  "items" : {
+                                    "type" : "record",
+                                    "name" : "DocumentLineIdentification1",
+                                    "fields" : [ {
+                                      "name" : "Tp",
+                                      "type" : [ "null", {
+                                        "type" : "record",
+                                        "name" : "DocumentLineType1",
+                                        "fields" : [ {
+                                          "name" : "CdOrPrtry",
+                                          "type" : {
+                                            "type" : "record",
+                                            "name" : "DocumentLineType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Prtry"
+                                            } ]
+                                          },
+                                          "source" : "element com.demo.remittance:CdOrPrtry"
+                                        }, {
+                                          "name" : "Issr",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element com.demo.remittance:Issr"
+                                        } ]
+                                      } ],
+                                      "source" : "element com.demo.remittance:Tp"
+                                    }, {
+                                      "name" : "Nb",
+                                      "type" : [ "null", "string" ],
+                                      "source" : "element com.demo.remittance:Nb"
+                                    }, {
+                                      "name" : "RltdDt",
+                                      "type" : [ "null", "string" ],
+                                      "source" : "element com.demo.remittance:RltdDt"
+                                    } ]
+                                  }
+                                },
+                                "source" : "element com.demo.remittance:Id"
+                              }, {
+                                "name" : "Desc",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Desc"
+                              }, {
+                                "name" : "Amt",
+                                "type" : [ "null", {
+                                  "type" : "record",
+                                  "name" : "RemittanceAmount3",
+                                  "fields" : [ {
+                                    "name" : "DuePyblAmt",
+                                    "type" : [ "null", {
+                                      "type" : "record",
+                                      "name" : "ActiveOrHistoricCurrencyAndAmount",
+                                      "fields" : [ {
+                                        "name" : "text_value",
+                                        "type" : [ "null", "double" ],
+                                        "source" : "element text_value"
+                                      }, {
+                                        "name" : "Ccy",
+                                        "type" : "string",
+                                        "source" : "attribute Ccy"
+                                      } ]
+                                    } ],
+                                    "source" : "element com.demo.remittance:DuePyblAmt"
+                                  }, {
+                                    "name" : "DscntApldAmt",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "DiscountAmountAndType1",
+                                        "fields" : [ {
+                                          "name" : "Tp",
+                                          "type" : [ "null", {
+                                            "type" : "record",
+                                            "name" : "DiscountAmountType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Prtry"
+                                            } ]
+                                          } ],
+                                          "source" : "element com.demo.remittance:Tp"
+                                        }, {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element com.demo.remittance:Amt"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element com.demo.remittance:DscntApldAmt"
+                                  }, {
+                                    "name" : "CdtNoteAmt",
+                                    "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                    "source" : "element com.demo.remittance:CdtNoteAmt"
+                                  }, {
+                                    "name" : "TaxAmt",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "TaxAmountAndType1",
+                                        "fields" : [ {
+                                          "name" : "Tp",
+                                          "type" : [ "null", {
+                                            "type" : "record",
+                                            "name" : "TaxAmountType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element com.demo.remittance:Prtry"
+                                            } ]
+                                          } ],
+                                          "source" : "element com.demo.remittance:Tp"
+                                        }, {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element com.demo.remittance:Amt"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element com.demo.remittance:TaxAmt"
+                                  }, {
+                                    "name" : "AdjstmntAmtAndRsn",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "DocumentAdjustment1",
+                                        "fields" : [ {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element com.demo.remittance:Amt"
+                                        }, {
+                                          "name" : "CdtDbtInd",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element com.demo.remittance:CdtDbtInd"
+                                        }, {
+                                          "name" : "Rsn",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element com.demo.remittance:Rsn"
+                                        }, {
+                                          "name" : "AddtlInf",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element com.demo.remittance:AddtlInf"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element com.demo.remittance:AdjstmntAmtAndRsn"
+                                  }, {
+                                    "name" : "RmtdAmt",
+                                    "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                    "source" : "element com.demo.remittance:RmtdAmt"
+                                  } ]
+                                } ],
+                                "source" : "element com.demo.remittance:Amt"
+                              } ]
+                            }
+                          } ],
+                          "source" : "element com.demo.remittance:LineDtls"
+                        } ]
+                      }
+                    } ],
+                    "source" : "element com.demo.remittance:RfrdDocInf"
+                  }, {
+                    "name" : "RfrdDocAmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "RemittanceAmount2",
+                      "fields" : [ {
+                        "name" : "DuePyblAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:DuePyblAmt"
+                      }, {
+                        "name" : "DscntApldAmt",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "DiscountAmountAndType1"
+                        } ],
+                        "source" : "element com.demo.remittance:DscntApldAmt"
+                      }, {
+                        "name" : "CdtNoteAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:CdtNoteAmt"
+                      }, {
+                        "name" : "TaxAmt",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "TaxAmountAndType1"
+                        } ],
+                        "source" : "element com.demo.remittance:TaxAmt"
+                      }, {
+                        "name" : "AdjstmntAmtAndRsn",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "DocumentAdjustment1"
+                        } ],
+                        "source" : "element com.demo.remittance:AdjstmntAmtAndRsn"
+                      }, {
+                        "name" : "RmtdAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:RmtdAmt"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:RfrdDocAmt"
+                  }, {
+                    "name" : "CdtrRefInf",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "CreditorReferenceInformation2",
+                      "fields" : [ {
+                        "name" : "Tp",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "CreditorReferenceType2",
+                          "fields" : [ {
+                            "name" : "CdOrPrtry",
+                            "type" : {
+                              "type" : "record",
+                              "name" : "CreditorReferenceType1Choice",
+                              "fields" : [ {
+                                "name" : "Cd",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Cd"
+                              }, {
+                                "name" : "Prtry",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Prtry"
+                              } ]
+                            },
+                            "source" : "element com.demo.remittance:CdOrPrtry"
+                          }, {
+                            "name" : "Issr",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Issr"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:Tp"
+                      }, {
+                        "name" : "Ref",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Ref"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:CdtrRefInf"
+                  }, {
+                    "name" : "Invcr",
+                    "type" : [ "null", "PartyIdentification135" ],
+                    "source" : "element com.demo.remittance:Invcr"
+                  }, {
+                    "name" : "Invcee",
+                    "type" : [ "null", "PartyIdentification135" ],
+                    "source" : "element com.demo.remittance:Invcee"
+                  }, {
+                    "name" : "TaxRmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "TaxData1",
+                      "fields" : [ {
+                        "name" : "Cdtr",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "TaxParty1",
+                          "fields" : [ {
+                            "name" : "TaxId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:TaxId"
+                          }, {
+                            "name" : "RegnId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:RegnId"
+                          }, {
+                            "name" : "TaxTp",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:TaxTp"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:Cdtr"
+                      }, {
+                        "name" : "Dbtr",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "TaxParty2",
+                          "fields" : [ {
+                            "name" : "TaxId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:TaxId"
+                          }, {
+                            "name" : "RegnId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:RegnId"
+                          }, {
+                            "name" : "TaxTp",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:TaxTp"
+                          }, {
+                            "name" : "Authstn",
+                            "type" : [ "null", {
+                              "type" : "record",
+                              "name" : "TaxAuthorisation1",
+                              "fields" : [ {
+                                "name" : "Titl",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Titl"
+                              }, {
+                                "name" : "Nm",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Nm"
+                              } ]
+                            } ],
+                            "source" : "element com.demo.remittance:Authstn"
+                          } ]
+                        } ],
+                        "source" : "element com.demo.remittance:Dbtr"
+                      }, {
+                        "name" : "UltmtDbtr",
+                        "type" : [ "null", "TaxParty2" ],
+                        "source" : "element com.demo.remittance:UltmtDbtr"
+                      }, {
+                        "name" : "AdmstnZone",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:AdmstnZone"
+                      }, {
+                        "name" : "RefNb",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:RefNb"
+                      }, {
+                        "name" : "Mtd",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Mtd"
+                      }, {
+                        "name" : "TtlTaxblBaseAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:TtlTaxblBaseAmt"
+                      }, {
+                        "name" : "TtlTaxAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:TtlTaxAmt"
+                      }, {
+                        "name" : "Dt",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Dt"
+                      }, {
+                        "name" : "SeqNb",
+                        "type" : [ "null", "double" ],
+                        "source" : "element com.demo.remittance:SeqNb"
+                      }, {
+                        "name" : "Rcrd",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "TaxRecord3",
+                            "fields" : [ {
+                              "name" : "Tp",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Tp"
+                            }, {
+                              "name" : "Ctgy",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Ctgy"
+                            }, {
+                              "name" : "CtgyDtls",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:CtgyDtls"
+                            }, {
+                              "name" : "DbtrSts",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:DbtrSts"
+                            }, {
+                              "name" : "CertId",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:CertId"
+                            }, {
+                              "name" : "FrmsCd",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:FrmsCd"
+                            }, {
+                              "name" : "Prd",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "TaxPeriod3",
+                                "fields" : [ {
+                                  "name" : "Yr",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Yr"
+                                }, {
+                                  "name" : "Tp",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Tp"
+                                }, {
+                                  "name" : "FrToDt",
+                                  "type" : [ "null", {
+                                    "type" : "record",
+                                    "name" : "DatePeriod2",
+                                    "fields" : [ {
+                                      "name" : "FrDt",
+                                      "type" : "string",
+                                      "source" : "element com.demo.remittance:FrDt"
+                                    }, {
+                                      "name" : "ToDt",
+                                      "type" : "string",
+                                      "source" : "element com.demo.remittance:ToDt"
+                                    } ]
+                                  } ],
+                                  "source" : "element com.demo.remittance:FrToDt"
+                                } ]
+                              } ],
+                              "source" : "element com.demo.remittance:Prd"
+                            }, {
+                              "name" : "TaxAmt",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "TaxAmount3",
+                                "fields" : [ {
+                                  "name" : "Rate",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element com.demo.remittance:Rate"
+                                }, {
+                                  "name" : "TaxblBaseAmt",
+                                  "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                  "source" : "element com.demo.remittance:TaxblBaseAmt"
+                                }, {
+                                  "name" : "TtlAmt",
+                                  "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                  "source" : "element com.demo.remittance:TtlAmt"
+                                }, {
+                                  "name" : "Dtls",
+                                  "type" : [ "null", {
+                                    "type" : "array",
+                                    "items" : {
+                                      "type" : "record",
+                                      "name" : "TaxRecordDetails3",
+                                      "fields" : [ {
+                                        "name" : "Prd",
+                                        "type" : [ "null", "TaxPeriod3" ],
+                                        "source" : "element com.demo.remittance:Prd"
+                                      }, {
+                                        "name" : "Amt",
+                                        "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                        "source" : "element com.demo.remittance:Amt"
+                                      } ]
+                                    }
+                                  } ],
+                                  "source" : "element com.demo.remittance:Dtls"
+                                } ]
+                              } ],
+                              "source" : "element com.demo.remittance:TaxAmt"
+                            }, {
+                              "name" : "AddtlInf",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:AddtlInf"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element com.demo.remittance:Rcrd"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:TaxRmt"
+                  }, {
+                    "name" : "GrnshmtRmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "Garnishment3",
+                      "fields" : [ {
+                        "name" : "Tp",
+                        "type" : {
+                          "type" : "record",
+                          "name" : "GarnishmentType1",
+                          "fields" : [ {
+                            "name" : "CdOrPrtry",
+                            "type" : {
+                              "type" : "record",
+                              "name" : "GarnishmentType1Choice",
+                              "fields" : [ {
+                                "name" : "Cd",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Cd"
+                              }, {
+                                "name" : "Prtry",
+                                "type" : [ "null", "string" ],
+                                "source" : "element com.demo.remittance:Prtry"
+                              } ]
+                            },
+                            "source" : "element com.demo.remittance:CdOrPrtry"
+                          }, {
+                            "name" : "Issr",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Issr"
+                          } ]
+                        },
+                        "source" : "element com.demo.remittance:Tp"
+                      }, {
+                        "name" : "Grnshee",
+                        "type" : [ "null", "PartyIdentification135" ],
+                        "source" : "element com.demo.remittance:Grnshee"
+                      }, {
+                        "name" : "GrnshmtAdmstr",
+                        "type" : [ "null", "PartyIdentification135" ],
+                        "source" : "element com.demo.remittance:GrnshmtAdmstr"
+                      }, {
+                        "name" : "RefNb",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:RefNb"
+                      }, {
+                        "name" : "Dt",
+                        "type" : [ "null", "string" ],
+                        "source" : "element com.demo.remittance:Dt"
+                      }, {
+                        "name" : "RmtdAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element com.demo.remittance:RmtdAmt"
+                      }, {
+                        "name" : "FmlyMdclInsrncInd",
+                        "type" : [ "null", "boolean" ],
+                        "source" : "element com.demo.remittance:FmlyMdclInsrncInd"
+                      }, {
+                        "name" : "MplyeeTermntnInd",
+                        "type" : [ "null", "boolean" ],
+                        "source" : "element com.demo.remittance:MplyeeTermntnInd"
+                      } ]
+                    } ],
+                    "source" : "element com.demo.remittance:GrnshmtRmt"
+                  }, {
+                    "name" : "AddtlRmtInf",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : "string"
+                    } ],
+                    "source" : "element com.demo.remittance:AddtlRmtInf"
+                  } ]
+                }
+              } ],
+              "source" : "element com.demo.remittance:Strd"
+            }, {
+              "name" : "OrgnlPmtInf",
+              "type" : {
+                "type" : "record",
+                "name" : "OriginalPaymentInformation9",
+                "fields" : [ {
+                  "name" : "Refs",
+                  "type" : {
+                    "type" : "record",
+                    "name" : "TransactionReferences5",
+                    "fields" : [ {
+                      "name" : "PmtInfId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:PmtInfId"
+                    }, {
+                      "name" : "InstrId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:InstrId"
+                    }, {
+                      "name" : "EndToEndId",
+                      "type" : "string",
+                      "source" : "element com.demo.remittance:EndToEndId"
+                    }, {
+                      "name" : "TxId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:TxId"
+                    }, {
+                      "name" : "UETR",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:UETR"
+                    }, {
+                      "name" : "MndtId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:MndtId"
+                    }, {
+                      "name" : "CdtrSchmeId",
+                      "type" : [ "null", "PartyIdentification135" ],
+                      "source" : "element com.demo.remittance:CdtrSchmeId"
+                    } ]
+                  },
+                  "source" : "element com.demo.remittance:Refs"
+                }, {
+                  "name" : "PmtTpInf",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "PaymentTypeInformation26",
+                    "fields" : [ {
+                      "name" : "InstrPrty",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:InstrPrty"
+                    }, {
+                      "name" : "SvcLvl",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "ServiceLevel8Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element com.demo.remittance:Prtry"
+                          } ]
+                        }
+                      } ],
+                      "source" : "element com.demo.remittance:SvcLvl"
+                    }, {
+                      "name" : "LclInstrm",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "LocalInstrument2Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:LclInstrm"
+                    }, {
+                      "name" : "CtgyPurp",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "CategoryPurpose1Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:CtgyPurp"
+                    } ]
+                  } ],
+                  "source" : "element com.demo.remittance:PmtTpInf"
+                }, {
+                  "name" : "Amt",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "AmountType3Choice",
+                    "fields" : [ {
+                      "name" : "InstdAmt",
+                      "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                      "source" : "element com.demo.remittance:InstdAmt"
+                    }, {
+                      "name" : "EqvtAmt",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "EquivalentAmount2",
+                        "fields" : [ {
+                          "name" : "Amt",
+                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                          "source" : "element com.demo.remittance:Amt"
+                        }, {
+                          "name" : "CcyOfTrf",
+                          "type" : "string",
+                          "source" : "element com.demo.remittance:CcyOfTrf"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:EqvtAmt"
+                    } ]
+                  } ],
+                  "source" : "element com.demo.remittance:Amt"
+                }, {
+                  "name" : "XchgRateInf",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "ExchangeRate1",
+                    "fields" : [ {
+                      "name" : "UnitCcy",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:UnitCcy"
+                    }, {
+                      "name" : "XchgRate",
+                      "type" : [ "null", "double" ],
+                      "source" : "element com.demo.remittance:XchgRate"
+                    }, {
+                      "name" : "RateTp",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:RateTp"
+                    }, {
+                      "name" : "CtrctId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:CtrctId"
+                    } ]
+                  } ],
+                  "source" : "element com.demo.remittance:XchgRateInf"
+                }, {
+                  "name" : "ReqdExctnDt",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "DateAndDateTime2Choice",
+                    "fields" : [ {
+                      "name" : "Dt",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:Dt"
+                    }, {
+                      "name" : "DtTm",
+                      "type" : [ "null", "long" ],
+                      "source" : "element com.demo.remittance:DtTm",
+                      "comment" : "timestamp"
+                    } ]
+                  } ],
+                  "source" : "element com.demo.remittance:ReqdExctnDt"
+                }, {
+                  "name" : "ReqdColltnDt",
+                  "type" : [ "null", "string" ],
+                  "source" : "element com.demo.remittance:ReqdColltnDt"
+                }, {
+                  "name" : "Dbtr",
+                  "type" : [ "null", "PartyIdentification135" ],
+                  "source" : "element com.demo.remittance:Dbtr"
+                }, {
+                  "name" : "DbtrAcct",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "CashAccount40",
+                    "fields" : [ {
+                      "name" : "Id",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "AccountIdentification4Choice",
+                        "fields" : [ {
+                          "name" : "IBAN",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:IBAN"
+                        }, {
+                          "name" : "Othr",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "GenericAccountIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element com.demo.remittance:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "AccountSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element com.demo.remittance:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element com.demo.remittance:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Issr"
+                            } ]
+                          } ],
+                          "source" : "element com.demo.remittance:Othr"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:Id"
+                    }, {
+                      "name" : "Tp",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "CashAccountType2Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element com.demo.remittance:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:Tp"
+                    }, {
+                      "name" : "Ccy",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:Ccy"
+                    }, {
+                      "name" : "Nm",
+                      "type" : [ "null", "string" ],
+                      "source" : "element com.demo.remittance:Nm"
+                    }, {
+                      "name" : "Prxy",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "ProxyAccountIdentification1",
+                        "fields" : [ {
+                          "name" : "Tp",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "ProxyAccountType1Choice",
+                            "fields" : [ {
+                              "name" : "Cd",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Cd"
+                            }, {
+                              "name" : "Prtry",
+                              "type" : [ "null", "string" ],
+                              "source" : "element com.demo.remittance:Prtry"
+                            } ]
+                          } ],
+                          "source" : "element com.demo.remittance:Tp"
+                        }, {
+                          "name" : "Id",
+                          "type" : "string",
+                          "source" : "element com.demo.remittance:Id"
+                        } ]
+                      } ],
+                      "source" : "element com.demo.remittance:Prxy"
+                    } ]
+                  } ],
+                  "source" : "element com.demo.remittance:DbtrAcct"
+                }, {
+                  "name" : "DbtrAgt",
+                  "type" : [ "null", "BranchAndFinancialInstitutionIdentification6" ],
+                  "source" : "element com.demo.remittance:DbtrAgt"
+                }, {
+                  "name" : "Cdtr",
+                  "type" : [ "null", "PartyIdentification135" ],
+                  "source" : "element com.demo.remittance:Cdtr"
+                }, {
+                  "name" : "CdtrAcct",
+                  "type" : [ "null", "CashAccount40" ],
+                  "source" : "element com.demo.remittance:CdtrAcct"
+                }, {
+                  "name" : "CdtrAgt",
+                  "type" : [ "null", "BranchAndFinancialInstitutionIdentification6" ],
+                  "source" : "element com.demo.remittance:CdtrAgt"
+                } ]
+              },
+              "source" : "element com.demo.remittance:OrgnlPmtInf"
+            } ]
+          }
+        },
+        "source" : "element com.demo.remittance:RmtInf"
+      }, {
+        "name" : "SplmtryData",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "SupplementaryData1",
+            "fields" : [ {
+              "name" : "PlcAndNm",
+              "type" : [ "null", "string" ],
+              "source" : "element com.demo.remittance:PlcAndNm"
+            }, {
+              "name" : "Envlp",
+              "type" : {
+                "type" : "record",
+                "name" : "SupplementaryDataEnvelope1",
+                "fields" : [ {
+                  "name" : "others",
+                  "type" : {
+                    "type" : "map",
+                    "values" : "string"
+                  }
+                } ]
+              },
+              "source" : "element com.demo.remittance:Envlp"
+            } ]
+          }
+        } ],
+        "source" : "element com.demo.remittance:SplmtryData"
+      } ]
+    },
+    "source" : "element com.demo.remittance:RmtAdvc"
+  } ]
+}
