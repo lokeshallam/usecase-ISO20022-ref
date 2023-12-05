@@ -1,3 +1,13 @@
+## Overview
+
+The demo illustrates how ISO20022 complaint messages can be ingested into Kafka. 
+
+
+## Requirements
+
+- If you don't have a Confluent Cloud account, sign up for a free trial [here](https://www.confluent.io/confluent-cloud/tryfree).
+- Please follow the instructions to install Terraform if it is not already installed on your system [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
 
 Step 1:
 
@@ -8,7 +18,7 @@ cd terraform/DeployClusters
 terraform plan
 
 ```
-Review the changes and apply the changes
+Review and apply the changes
 
 ```
 terraform apply
@@ -105,3 +115,10 @@ And consume events by running following command
 ```
 java -cp target/examples-1.0.jar com.demo.remittance.AvroConsumer src/main/resources/cloud-config.properties
 ```
+
+
+References:
+
+Confluent Terraform Provider - https://registry.terraform.io/providers/confluentinc/confluent/latest/docs
+
+
