@@ -1,0 +1,1451 @@
+{
+  "type" : "record",
+  "name" : "Document",
+  "fields" : [ {
+    "name" : "RmtAdvc",
+    "type" : {
+      "type" : "record",
+      "name" : "RemittanceAdviceV05",
+      "fields" : [ {
+        "name" : "GrpHdr",
+        "type" : {
+          "type" : "record",
+          "name" : "GroupHeader79",
+          "fields" : [ {
+            "name" : "MsgId",
+            "type" : "string",
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MsgId"
+          }, {
+            "name" : "CreDtTm",
+            "type" : "long",
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CreDtTm",
+            "comment" : "timestamp"
+          }, {
+            "name" : "Authstn",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : {
+                "type" : "record",
+                "name" : "Authorisation1Choice",
+                "fields" : [ {
+                  "name" : "Cd",
+                  "type" : [ "null", "string" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                }, {
+                  "name" : "Prtry",
+                  "type" : [ "null", "string" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                } ]
+              }
+            } ],
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Authstn"
+          }, {
+            "name" : "CpyInd",
+            "type" : [ "null", "string" ],
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CpyInd"
+          }, {
+            "name" : "InitgPty",
+            "type" : {
+              "type" : "record",
+              "name" : "PartyIdentification135",
+              "fields" : [ {
+                "name" : "Nm",
+                "type" : [ "null", "string" ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+              }, {
+                "name" : "PstlAdr",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "PostalAddress24",
+                  "fields" : [ {
+                    "name" : "AdrTp",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "AddressType3Choice",
+                      "fields" : [ {
+                        "name" : "Cd",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                      }, {
+                        "name" : "Prtry",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "GenericIdentification30",
+                          "fields" : [ {
+                            "name" : "Id",
+                            "type" : "string",
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                          }, {
+                            "name" : "Issr",
+                            "type" : "string",
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                          }, {
+                            "name" : "SchmeNm",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SchmeNm"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AdrTp"
+                  }, {
+                    "name" : "Dept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dept"
+                  }, {
+                    "name" : "SubDept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SubDept"
+                  }, {
+                    "name" : "StrtNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:StrtNm"
+                  }, {
+                    "name" : "BldgNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:BldgNb"
+                  }, {
+                    "name" : "BldgNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:BldgNm"
+                  }, {
+                    "name" : "Flr",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Flr"
+                  }, {
+                    "name" : "PstBx",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PstBx"
+                  }, {
+                    "name" : "Room",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Room"
+                  }, {
+                    "name" : "PstCd",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PstCd"
+                  }, {
+                    "name" : "TwnNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TwnNm"
+                  }, {
+                    "name" : "TwnLctnNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TwnLctnNm"
+                  }, {
+                    "name" : "DstrctNm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DstrctNm"
+                  }, {
+                    "name" : "CtrySubDvsn",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtrySubDvsn"
+                  }, {
+                    "name" : "Ctry",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Ctry"
+                  }, {
+                    "name" : "AdrLine",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : "string"
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AdrLine"
+                  } ]
+                } ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PstlAdr"
+              }, {
+                "name" : "Id",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "Party38Choice",
+                  "fields" : [ {
+                    "name" : "OrgId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "OrganisationIdentification29",
+                      "fields" : [ {
+                        "name" : "AnyBIC",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AnyBIC"
+                      }, {
+                        "name" : "LEI",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:LEI"
+                      }, {
+                        "name" : "Othr",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "GenericOrganisationIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "OrganisationIdentificationSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Othr"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:OrgId"
+                  }, {
+                    "name" : "PrvtId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "PersonIdentification13",
+                      "fields" : [ {
+                        "name" : "DtAndPlcOfBirth",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "DateAndPlaceOfBirth1",
+                          "fields" : [ {
+                            "name" : "BirthDt",
+                            "type" : "string",
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:BirthDt"
+                          }, {
+                            "name" : "PrvcOfBirth",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PrvcOfBirth"
+                          }, {
+                            "name" : "CityOfBirth",
+                            "type" : "string",
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CityOfBirth"
+                          }, {
+                            "name" : "CtryOfBirth",
+                            "type" : "string",
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtryOfBirth"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DtAndPlcOfBirth"
+                      }, {
+                        "name" : "Othr",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "GenericPersonIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "PersonIdentificationSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Othr"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PrvtId"
+                  } ]
+                } ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+              }, {
+                "name" : "CtryOfRes",
+                "type" : [ "null", "string" ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtryOfRes"
+              }, {
+                "name" : "CtctDtls",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "Contact4",
+                  "fields" : [ {
+                    "name" : "NmPrfx",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:NmPrfx"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+                  }, {
+                    "name" : "PhneNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PhneNb"
+                  }, {
+                    "name" : "MobNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MobNb"
+                  }, {
+                    "name" : "FaxNb",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FaxNb"
+                  }, {
+                    "name" : "EmailAdr",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:EmailAdr"
+                  }, {
+                    "name" : "EmailPurp",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:EmailPurp"
+                  }, {
+                    "name" : "JobTitl",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:JobTitl"
+                  }, {
+                    "name" : "Rspnsblty",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Rspnsblty"
+                  }, {
+                    "name" : "Dept",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dept"
+                  }, {
+                    "name" : "Othr",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "OtherContact1",
+                        "fields" : [ {
+                          "name" : "ChanlTp",
+                          "type" : "string",
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ChanlTp"
+                        }, {
+                          "name" : "Id",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                        } ]
+                      }
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Othr"
+                  }, {
+                    "name" : "PrefrdMtd",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PrefrdMtd"
+                  } ]
+                } ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtctDtls"
+              } ]
+            },
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:InitgPty"
+          }, {
+            "name" : "MsgRcpt",
+            "type" : [ "null", "PartyIdentification135" ],
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MsgRcpt"
+          }, {
+            "name" : "FwdgAgt",
+            "type" : [ "null", {
+              "type" : "record",
+              "name" : "BranchAndFinancialInstitutionIdentification6",
+              "fields" : [ {
+                "name" : "FinInstnId",
+                "type" : {
+                  "type" : "record",
+                  "name" : "FinancialInstitutionIdentification18",
+                  "fields" : [ {
+                    "name" : "BICFI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:BICFI"
+                  }, {
+                    "name" : "ClrSysMmbId",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "ClearingSystemMemberIdentification2",
+                      "fields" : [ {
+                        "name" : "ClrSysId",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "ClearingSystemIdentification2Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ClrSysId"
+                      }, {
+                        "name" : "MmbId",
+                        "type" : "string",
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MmbId"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ClrSysMmbId"
+                  }, {
+                    "name" : "LEI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:LEI"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+                  }, {
+                    "name" : "PstlAdr",
+                    "type" : [ "null", "PostalAddress24" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PstlAdr"
+                  }, {
+                    "name" : "Othr",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "GenericFinancialIdentification1",
+                      "fields" : [ {
+                        "name" : "Id",
+                        "type" : "string",
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                      }, {
+                        "name" : "SchmeNm",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "FinancialIdentificationSchemeName1Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SchmeNm"
+                      }, {
+                        "name" : "Issr",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Othr"
+                  } ]
+                },
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FinInstnId"
+              }, {
+                "name" : "BrnchId",
+                "type" : [ "null", {
+                  "type" : "record",
+                  "name" : "BranchData3",
+                  "fields" : [ {
+                    "name" : "Id",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                  }, {
+                    "name" : "LEI",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:LEI"
+                  }, {
+                    "name" : "Nm",
+                    "type" : [ "null", "string" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+                  }, {
+                    "name" : "PstlAdr",
+                    "type" : [ "null", "PostalAddress24" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PstlAdr"
+                  } ]
+                } ],
+                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:BrnchId"
+              } ]
+            } ],
+            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FwdgAgt"
+          } ]
+        },
+        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:GrpHdr"
+      }, {
+        "name" : "RmtInf",
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "RemittanceInformation20",
+            "fields" : [ {
+              "name" : "RmtId",
+              "type" : [ "null", "string" ],
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtId"
+            }, {
+              "name" : "Ustrd",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : "string"
+              } ],
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Ustrd"
+            }, {
+              "name" : "Strd",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "StructuredRemittanceInformation17",
+                  "fields" : [ {
+                    "name" : "RfrdDocInf",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "record",
+                        "name" : "ReferredDocumentInformation7",
+                        "fields" : [ {
+                          "name" : "Tp",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "ReferredDocumentType4",
+                            "fields" : [ {
+                              "name" : "CdOrPrtry",
+                              "type" : {
+                                "type" : "record",
+                                "name" : "ReferredDocumentType3Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                } ]
+                              },
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdOrPrtry"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                            } ]
+                          } ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                        }, {
+                          "name" : "Nb",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nb"
+                        }, {
+                          "name" : "RltdDt",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RltdDt"
+                        }, {
+                          "name" : "LineDtls",
+                          "type" : [ "null", {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "record",
+                              "name" : "DocumentLineInformation1",
+                              "fields" : [ {
+                                "name" : "Id",
+                                "type" : {
+                                  "type" : "array",
+                                  "items" : {
+                                    "type" : "record",
+                                    "name" : "DocumentLineIdentification1",
+                                    "fields" : [ {
+                                      "name" : "Tp",
+                                      "type" : [ "null", {
+                                        "type" : "record",
+                                        "name" : "DocumentLineType1",
+                                        "fields" : [ {
+                                          "name" : "CdOrPrtry",
+                                          "type" : {
+                                            "type" : "record",
+                                            "name" : "DocumentLineType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                            } ]
+                                          },
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdOrPrtry"
+                                        }, {
+                                          "name" : "Issr",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                                        } ]
+                                      } ],
+                                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                                    }, {
+                                      "name" : "Nb",
+                                      "type" : [ "null", "string" ],
+                                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nb"
+                                    }, {
+                                      "name" : "RltdDt",
+                                      "type" : [ "null", "string" ],
+                                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RltdDt"
+                                    } ]
+                                  }
+                                },
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                              }, {
+                                "name" : "Desc",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Desc"
+                              }, {
+                                "name" : "Amt",
+                                "type" : [ "null", {
+                                  "type" : "record",
+                                  "name" : "RemittanceAmount3",
+                                  "fields" : [ {
+                                    "name" : "DuePyblAmt",
+                                    "type" : [ "null", {
+                                      "type" : "record",
+                                      "name" : "ActiveOrHistoricCurrencyAndAmount",
+                                      "fields" : [ {
+                                        "name" : "text_value",
+                                        "type" : [ "null", "double" ],
+                                        "source" : "element text_value"
+                                      }, {
+                                        "name" : "Ccy",
+                                        "type" : "string",
+                                        "source" : "attribute Ccy"
+                                      } ]
+                                    } ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DuePyblAmt"
+                                  }, {
+                                    "name" : "DscntApldAmt",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "DiscountAmountAndType1",
+                                        "fields" : [ {
+                                          "name" : "Tp",
+                                          "type" : [ "null", {
+                                            "type" : "record",
+                                            "name" : "DiscountAmountType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                            } ]
+                                          } ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                                        }, {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DscntApldAmt"
+                                  }, {
+                                    "name" : "CdtNoteAmt",
+                                    "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtNoteAmt"
+                                  }, {
+                                    "name" : "TaxAmt",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "TaxAmountAndType1",
+                                        "fields" : [ {
+                                          "name" : "Tp",
+                                          "type" : [ "null", {
+                                            "type" : "record",
+                                            "name" : "TaxAmountType1Choice",
+                                            "fields" : [ {
+                                              "name" : "Cd",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                            }, {
+                                              "name" : "Prtry",
+                                              "type" : [ "null", "string" ],
+                                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                            } ]
+                                          } ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                                        }, {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxAmt"
+                                  }, {
+                                    "name" : "AdjstmntAmtAndRsn",
+                                    "type" : [ "null", {
+                                      "type" : "array",
+                                      "items" : {
+                                        "type" : "record",
+                                        "name" : "DocumentAdjustment1",
+                                        "fields" : [ {
+                                          "name" : "Amt",
+                                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                                        }, {
+                                          "name" : "CdtDbtInd",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtDbtInd"
+                                        }, {
+                                          "name" : "Rsn",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Rsn"
+                                        }, {
+                                          "name" : "AddtlInf",
+                                          "type" : [ "null", "string" ],
+                                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AddtlInf"
+                                        } ]
+                                      }
+                                    } ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AdjstmntAmtAndRsn"
+                                  }, {
+                                    "name" : "RmtdAmt",
+                                    "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtdAmt"
+                                  } ]
+                                } ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                              } ]
+                            }
+                          } ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:LineDtls"
+                        } ]
+                      }
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RfrdDocInf"
+                  }, {
+                    "name" : "RfrdDocAmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "RemittanceAmount2",
+                      "fields" : [ {
+                        "name" : "DuePyblAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DuePyblAmt"
+                      }, {
+                        "name" : "DscntApldAmt",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "DiscountAmountAndType1"
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DscntApldAmt"
+                      }, {
+                        "name" : "CdtNoteAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtNoteAmt"
+                      }, {
+                        "name" : "TaxAmt",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "TaxAmountAndType1"
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxAmt"
+                      }, {
+                        "name" : "AdjstmntAmtAndRsn",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : "DocumentAdjustment1"
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AdjstmntAmtAndRsn"
+                      }, {
+                        "name" : "RmtdAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtdAmt"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RfrdDocAmt"
+                  }, {
+                    "name" : "CdtrRefInf",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "CreditorReferenceInformation2",
+                      "fields" : [ {
+                        "name" : "Tp",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "CreditorReferenceType2",
+                          "fields" : [ {
+                            "name" : "CdOrPrtry",
+                            "type" : {
+                              "type" : "record",
+                              "name" : "CreditorReferenceType1Choice",
+                              "fields" : [ {
+                                "name" : "Cd",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                              }, {
+                                "name" : "Prtry",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                              } ]
+                            },
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdOrPrtry"
+                          }, {
+                            "name" : "Issr",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                      }, {
+                        "name" : "Ref",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Ref"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtrRefInf"
+                  }, {
+                    "name" : "Invcr",
+                    "type" : [ "null", "PartyIdentification135" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Invcr"
+                  }, {
+                    "name" : "Invcee",
+                    "type" : [ "null", "PartyIdentification135" ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Invcee"
+                  }, {
+                    "name" : "TaxRmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "TaxData1",
+                      "fields" : [ {
+                        "name" : "Cdtr",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "TaxParty1",
+                          "fields" : [ {
+                            "name" : "TaxId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxId"
+                          }, {
+                            "name" : "RegnId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RegnId"
+                          }, {
+                            "name" : "TaxTp",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxTp"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cdtr"
+                      }, {
+                        "name" : "Dbtr",
+                        "type" : [ "null", {
+                          "type" : "record",
+                          "name" : "TaxParty2",
+                          "fields" : [ {
+                            "name" : "TaxId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxId"
+                          }, {
+                            "name" : "RegnId",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RegnId"
+                          }, {
+                            "name" : "TaxTp",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxTp"
+                          }, {
+                            "name" : "Authstn",
+                            "type" : [ "null", {
+                              "type" : "record",
+                              "name" : "TaxAuthorisation1",
+                              "fields" : [ {
+                                "name" : "Titl",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Titl"
+                              }, {
+                                "name" : "Nm",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+                              } ]
+                            } ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Authstn"
+                          } ]
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dbtr"
+                      }, {
+                        "name" : "UltmtDbtr",
+                        "type" : [ "null", "TaxParty2" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:UltmtDbtr"
+                      }, {
+                        "name" : "AdmstnZone",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AdmstnZone"
+                      }, {
+                        "name" : "RefNb",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RefNb"
+                      }, {
+                        "name" : "Mtd",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Mtd"
+                      }, {
+                        "name" : "TtlTaxblBaseAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TtlTaxblBaseAmt"
+                      }, {
+                        "name" : "TtlTaxAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TtlTaxAmt"
+                      }, {
+                        "name" : "Dt",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dt"
+                      }, {
+                        "name" : "SeqNb",
+                        "type" : [ "null", "double" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SeqNb"
+                      }, {
+                        "name" : "Rcrd",
+                        "type" : [ "null", {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "record",
+                            "name" : "TaxRecord3",
+                            "fields" : [ {
+                              "name" : "Tp",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                            }, {
+                              "name" : "Ctgy",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Ctgy"
+                            }, {
+                              "name" : "CtgyDtls",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtgyDtls"
+                            }, {
+                              "name" : "DbtrSts",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DbtrSts"
+                            }, {
+                              "name" : "CertId",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CertId"
+                            }, {
+                              "name" : "FrmsCd",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FrmsCd"
+                            }, {
+                              "name" : "Prd",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "TaxPeriod3",
+                                "fields" : [ {
+                                  "name" : "Yr",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Yr"
+                                }, {
+                                  "name" : "Tp",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                                }, {
+                                  "name" : "FrToDt",
+                                  "type" : [ "null", {
+                                    "type" : "record",
+                                    "name" : "DatePeriod2",
+                                    "fields" : [ {
+                                      "name" : "FrDt",
+                                      "type" : "string",
+                                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FrDt"
+                                    }, {
+                                      "name" : "ToDt",
+                                      "type" : "string",
+                                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ToDt"
+                                    } ]
+                                  } ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FrToDt"
+                                } ]
+                              } ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prd"
+                            }, {
+                              "name" : "TaxAmt",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "TaxAmount3",
+                                "fields" : [ {
+                                  "name" : "Rate",
+                                  "type" : [ "null", "double" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Rate"
+                                }, {
+                                  "name" : "TaxblBaseAmt",
+                                  "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxblBaseAmt"
+                                }, {
+                                  "name" : "TtlAmt",
+                                  "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TtlAmt"
+                                }, {
+                                  "name" : "Dtls",
+                                  "type" : [ "null", {
+                                    "type" : "array",
+                                    "items" : {
+                                      "type" : "record",
+                                      "name" : "TaxRecordDetails3",
+                                      "fields" : [ {
+                                        "name" : "Prd",
+                                        "type" : [ "null", "TaxPeriod3" ],
+                                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prd"
+                                      }, {
+                                        "name" : "Amt",
+                                        "type" : "ActiveOrHistoricCurrencyAndAmount",
+                                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                                      } ]
+                                    }
+                                  } ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dtls"
+                                } ]
+                              } ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxAmt"
+                            }, {
+                              "name" : "AddtlInf",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AddtlInf"
+                            } ]
+                          }
+                        } ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Rcrd"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TaxRmt"
+                  }, {
+                    "name" : "GrnshmtRmt",
+                    "type" : [ "null", {
+                      "type" : "record",
+                      "name" : "Garnishment3",
+                      "fields" : [ {
+                        "name" : "Tp",
+                        "type" : {
+                          "type" : "record",
+                          "name" : "GarnishmentType1",
+                          "fields" : [ {
+                            "name" : "CdOrPrtry",
+                            "type" : {
+                              "type" : "record",
+                              "name" : "GarnishmentType1Choice",
+                              "fields" : [ {
+                                "name" : "Cd",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                              }, {
+                                "name" : "Prtry",
+                                "type" : [ "null", "string" ],
+                                "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                              } ]
+                            },
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdOrPrtry"
+                          }, {
+                            "name" : "Issr",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                          } ]
+                        },
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                      }, {
+                        "name" : "Grnshee",
+                        "type" : [ "null", "PartyIdentification135" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Grnshee"
+                      }, {
+                        "name" : "GrnshmtAdmstr",
+                        "type" : [ "null", "PartyIdentification135" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:GrnshmtAdmstr"
+                      }, {
+                        "name" : "RefNb",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RefNb"
+                      }, {
+                        "name" : "Dt",
+                        "type" : [ "null", "string" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dt"
+                      }, {
+                        "name" : "RmtdAmt",
+                        "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtdAmt"
+                      }, {
+                        "name" : "FmlyMdclInsrncInd",
+                        "type" : [ "null", "boolean" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:FmlyMdclInsrncInd"
+                      }, {
+                        "name" : "MplyeeTermntnInd",
+                        "type" : [ "null", "boolean" ],
+                        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MplyeeTermntnInd"
+                      } ]
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:GrnshmtRmt"
+                  }, {
+                    "name" : "AddtlRmtInf",
+                    "type" : [ "null", {
+                      "type" : "array",
+                      "items" : "string"
+                    } ],
+                    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:AddtlRmtInf"
+                  } ]
+                }
+              } ],
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Strd"
+            }, {
+              "name" : "OrgnlPmtInf",
+              "type" : {
+                "type" : "record",
+                "name" : "OriginalPaymentInformation9",
+                "fields" : [ {
+                  "name" : "Refs",
+                  "type" : {
+                    "type" : "record",
+                    "name" : "TransactionReferences5",
+                    "fields" : [ {
+                      "name" : "PmtInfId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PmtInfId"
+                    }, {
+                      "name" : "InstrId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:InstrId"
+                    }, {
+                      "name" : "EndToEndId",
+                      "type" : "string",
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:EndToEndId"
+                    }, {
+                      "name" : "TxId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:TxId"
+                    }, {
+                      "name" : "UETR",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:UETR"
+                    }, {
+                      "name" : "MndtId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:MndtId"
+                    }, {
+                      "name" : "CdtrSchmeId",
+                      "type" : [ "null", "PartyIdentification135" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtrSchmeId"
+                    } ]
+                  },
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Refs"
+                }, {
+                  "name" : "PmtTpInf",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "PaymentTypeInformation26",
+                    "fields" : [ {
+                      "name" : "InstrPrty",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:InstrPrty"
+                    }, {
+                      "name" : "SvcLvl",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "record",
+                          "name" : "ServiceLevel8Choice",
+                          "fields" : [ {
+                            "name" : "Cd",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                          }, {
+                            "name" : "Prtry",
+                            "type" : [ "null", "string" ],
+                            "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                          } ]
+                        }
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SvcLvl"
+                    }, {
+                      "name" : "LclInstrm",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "LocalInstrument2Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:LclInstrm"
+                    }, {
+                      "name" : "CtgyPurp",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "CategoryPurpose1Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtgyPurp"
+                    } ]
+                  } ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PmtTpInf"
+                }, {
+                  "name" : "Amt",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "AmountType3Choice",
+                    "fields" : [ {
+                      "name" : "InstdAmt",
+                      "type" : [ "null", "ActiveOrHistoricCurrencyAndAmount" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:InstdAmt"
+                    }, {
+                      "name" : "EqvtAmt",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "EquivalentAmount2",
+                        "fields" : [ {
+                          "name" : "Amt",
+                          "type" : "ActiveOrHistoricCurrencyAndAmount",
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                        }, {
+                          "name" : "CcyOfTrf",
+                          "type" : "string",
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CcyOfTrf"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:EqvtAmt"
+                    } ]
+                  } ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Amt"
+                }, {
+                  "name" : "XchgRateInf",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "ExchangeRate1",
+                    "fields" : [ {
+                      "name" : "UnitCcy",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:UnitCcy"
+                    }, {
+                      "name" : "XchgRate",
+                      "type" : [ "null", "double" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:XchgRate"
+                    }, {
+                      "name" : "RateTp",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RateTp"
+                    }, {
+                      "name" : "CtrctId",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CtrctId"
+                    } ]
+                  } ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:XchgRateInf"
+                }, {
+                  "name" : "ReqdExctnDt",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "DateAndDateTime2Choice",
+                    "fields" : [ {
+                      "name" : "Dt",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dt"
+                    }, {
+                      "name" : "DtTm",
+                      "type" : [ "null", "long" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DtTm",
+                      "comment" : "timestamp"
+                    } ]
+                  } ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ReqdExctnDt"
+                }, {
+                  "name" : "ReqdColltnDt",
+                  "type" : [ "null", "string" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:ReqdColltnDt"
+                }, {
+                  "name" : "Dbtr",
+                  "type" : [ "null", "PartyIdentification135" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Dbtr"
+                }, {
+                  "name" : "DbtrAcct",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "CashAccount40",
+                    "fields" : [ {
+                      "name" : "Id",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "AccountIdentification4Choice",
+                        "fields" : [ {
+                          "name" : "IBAN",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:IBAN"
+                        }, {
+                          "name" : "Othr",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "GenericAccountIdentification1",
+                            "fields" : [ {
+                              "name" : "Id",
+                              "type" : "string",
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                            }, {
+                              "name" : "SchmeNm",
+                              "type" : [ "null", {
+                                "type" : "record",
+                                "name" : "AccountSchemeName1Choice",
+                                "fields" : [ {
+                                  "name" : "Cd",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                                }, {
+                                  "name" : "Prtry",
+                                  "type" : [ "null", "string" ],
+                                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                                } ]
+                              } ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SchmeNm"
+                            }, {
+                              "name" : "Issr",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Issr"
+                            } ]
+                          } ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Othr"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                    }, {
+                      "name" : "Tp",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "CashAccountType2Choice",
+                        "fields" : [ {
+                          "name" : "Cd",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                        }, {
+                          "name" : "Prtry",
+                          "type" : [ "null", "string" ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                    }, {
+                      "name" : "Ccy",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Ccy"
+                    }, {
+                      "name" : "Nm",
+                      "type" : [ "null", "string" ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Nm"
+                    }, {
+                      "name" : "Prxy",
+                      "type" : [ "null", {
+                        "type" : "record",
+                        "name" : "ProxyAccountIdentification1",
+                        "fields" : [ {
+                          "name" : "Tp",
+                          "type" : [ "null", {
+                            "type" : "record",
+                            "name" : "ProxyAccountType1Choice",
+                            "fields" : [ {
+                              "name" : "Cd",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cd"
+                            }, {
+                              "name" : "Prtry",
+                              "type" : [ "null", "string" ],
+                              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prtry"
+                            } ]
+                          } ],
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Tp"
+                        }, {
+                          "name" : "Id",
+                          "type" : "string",
+                          "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Id"
+                        } ]
+                      } ],
+                      "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Prxy"
+                    } ]
+                  } ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DbtrAcct"
+                }, {
+                  "name" : "DbtrAgt",
+                  "type" : [ "null", "BranchAndFinancialInstitutionIdentification6" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:DbtrAgt"
+                }, {
+                  "name" : "Cdtr",
+                  "type" : [ "null", "PartyIdentification135" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Cdtr"
+                }, {
+                  "name" : "CdtrAcct",
+                  "type" : [ "null", "CashAccount40" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtrAcct"
+                }, {
+                  "name" : "CdtrAgt",
+                  "type" : [ "null", "BranchAndFinancialInstitutionIdentification6" ],
+                  "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:CdtrAgt"
+                } ]
+              },
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:OrgnlPmtInf"
+            } ]
+          }
+        },
+        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtInf"
+      }, {
+        "name" : "SplmtryData",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "SupplementaryData1",
+            "fields" : [ {
+              "name" : "PlcAndNm",
+              "type" : [ "null", "string" ],
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:PlcAndNm"
+            }, {
+              "name" : "Envlp",
+              "type" : {
+                "type" : "record",
+                "name" : "SupplementaryDataEnvelope1",
+                "fields" : [ {
+                  "name" : "others",
+                  "type" : {
+                    "type" : "map",
+                    "values" : "string"
+                  }
+                } ]
+              },
+              "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:Envlp"
+            } ]
+          }
+        } ],
+        "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:SplmtryData"
+      } ]
+    },
+    "source" : "element urn:iso:std:iso:20022:tech:xsd:remt.001.001.05:RmtAdvc"
+  } ]
+}

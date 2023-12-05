@@ -1,0 +1,50 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'scala'
+
+group = 'in.dreamlabs'
+version = '1.8.2'
+
+description = "A simple tool to convert xml to avro and their respective schemas"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url "https://repo.maven.apache.org/maven2" } }
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.12.18'
+    implementation 'org.scala-lang:scala-reflect:2.12.18'
+    implementation 'org.yaml:snakeyaml:1.18'
+    implementation 'org.apache.avro:avro:1.11.3'
+    implementation 'xerces:xercesImpl:2.12.2'
+    implementation 'javax.xml.bind:jaxb-api:2.3.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.16.0'
+
+    implementation 'commons-io:commons-io:2.6'
+    testImplementation 'org.skyscreamer:jsonassert:1.2.3'
+    testImplementation 'junit:junit:4.8.1'
+}
+
+task fatJar(type: Jar) {
+    duplicatesStrategy 'exclude'
+    manifest {
+        attributes 'Implementation-Title': name,
+                'Implementation-Version': version,
+                'Main-Class': 'in.dreamlabs.xmlavro.Converter'
+    }
+    baseName = project.name + '-all'
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task copyLibs(type: Copy) {
+    into buildDir.absolutePath + '/libs/libs'
+    from configurations.runtimeClasspath
+
+}
+
+
+fatJar.dependsOn(copyLibs)
+build.dependsOn(fatJar)
